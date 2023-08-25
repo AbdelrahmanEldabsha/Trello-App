@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "7713c373-8367-41ca-9ea3-f2e988027493",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27431788"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"yousef\",\r\n  \"email\": \"yousef@gmail.com\",\r\n  \"password\": \"123\",\r\n  \"cpassword\":\"123\",\r\n  \"age\":45,\r\n  \"gender\":\"male\",\r\n  \"phone\":\"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/user/signUp"
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"ola@gmail.com\",\r\n  \"password\": \"123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/user/signIn"
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "test eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaSIsImVtYWlsIjoiYWxpQGdtYWlsLmNvbSIsImlkIjoiNjRiNTk5ZDFjYzE4Zjg3ZGU5YTE4ZmQ1IiwiaWF0IjoxNjg5NjM1NzkyfQ.kiYmVZy9OfOEo6RPSe_cFK8EIuf-LFzdgaVyCXLDT0s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"oldPassword\": \"123\",\r\n     \"newPassword\":\"111\",\r\n     \"cnewPassword\":\"111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/user/changePassword"
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "test eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaSIsImVtYWlsIjoiYWxpQGdtYWlsLmNvbSIsImlkIjoiNjRiNWQ2ZTcxNTJhY2QzMTZhYzYyMDZlIiwiaWF0IjoxNjg5NjM4NjM5fQ.KcV6I0m4EOwZxLk6OTlxssa_8ep-HjElsDCiOL7vOK8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"firstName\": \"ali\",\r\n     \"lastName\":\"lala\",\r\n     \"age\":20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/user/updateUser"
+					},
+					"response": []
+				},
+				{
+					"name": "softDelete",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "test eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vIiwiZW1haWwiOiJtb0BnbWFpbC5jb20iLCJpZCI6IjY0YjU5OWM0Y2MxOGY4N2RlOWExOGZkMiIsImlhdCI6MTY4OTYzNTQwN30.O0GtY4Ju_pcjrZ545yb9VCZxzjUryIf-qD3VJhV_3_g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/user/softDelete"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "test eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaSIsImVtYWlsIjoiYWxpQGdtYWlsLmNvbSIsImlkIjoiNjRiNTk5ZDFjYzE4Zjg3ZGU5YTE4ZmQ1IiwiaWF0IjoxNjg5NjM4MDk1fQ.qxM463VOjkwSh0_mBNwgye9K_3TXu4mivxVhybMHvsw",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/user/deleteUser"
+					},
+					"response": []
+				},
+				{
+					"name": "logOut",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "test eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaSIsImVtYWlsIjoiYWxpQGdtYWlsLmNvbSIsImlkIjoiNjRiNTk5ZDFjYzE4Zjg3ZGU5YTE4ZmQ1IiwiaWF0IjoxNjg5NjI5NjI1fQ.fsTrMmKJm1WwMU0yAVGBWTKEyAif-0EfSmj1zEEVgzA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/user/logOut"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "addTask",
+					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": {
+								"header": "{\r\n    \r\n}",
+								"payload": "{\r\n    \r\n}",
+								"addTokenTo": "header",
+								"algorithm": "HS256",
+								"isSecretBase64Encoded": false,
+								"headerPrefix": "Bearer",
+								"queryParamKey": "token"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"post\",\r\n    \"description\":\"ff\",\r\n    \"assignedTo\":\"64b599ddcc18f87de9a18fd8\",\r\n    \"deadline\":\"2023-10-10\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/task"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTasksWithUserData",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCreatedTasks",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTasksAssignedToMe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAllLateTasksAssignedToUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "test eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaSBsYWxhIiwiZW1haWwiOiJhbGlAZ21haWwuY29tIiwiaWQiOiI2NGI1ZDZlNzE1MmFjZDMxNmFjNjIwNmUiLCJpYXQiOjE2ODk3ODU1OTd9.JZcrN9nkOeAUlAw_yq-zzkHV_v--GIH7c2irIQsvkcQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"task 2\",\r\n    \"description\":\"ff\",\r\n    \"status\":\"doing\",\r\n    \"assignedTo\":\"64b599ddcc18f87de9a18fd8\",\r\n    \"deadline\":\"2023-7-18\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/task/updateTask?taskId=64b6b6ffe13d925ba2097f5f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"updateTask"
+							],
+							"query": [
+								{
+									"key": "taskId",
+									"value": "64b6b6ffe13d925ba2097f5f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTask",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/product/deleteProduct"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
